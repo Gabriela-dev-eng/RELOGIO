@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RELÓGIO</title>
+    <title></title>
     <style>
         body { 
             font-family: Arial, sans-serif;
@@ -15,8 +15,6 @@
     </style>
 </head>
 <body>
-    <h1>RELOGIO</h1>
-    <h2>TESTE 02</h2>
     <div id="relogio">--:--:--</div>
 
     <script>
