@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Relógio Digital</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            font-family: 'Arial', sans-serif;
         }
         #relogio {
-            font-size: 48px;
-            font-weight: bold;
+            font-size: 5rem;
+            color: #0f0;
+            text-shadow: 0 0 10px #0f0;
         }
     </style>
 </head>
 <body>
-    <div id="relogio">--:--:--</div>
+    <div id="relogio"></div>
 
     <script>
         function atualizar() {
