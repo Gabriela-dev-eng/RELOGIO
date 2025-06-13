@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Relógio Digital</title>
+    <title>Meu Relógio</title>
     <style>
         body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #000;
-            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
         }
         #relogio {
-            font-size: 5rem;
-            color: #0f0;
-            text-shadow: 0 0 10px #0f0;
+            font-size: 50px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div id="relogio"></div>
+    <div id="relogio">--:--:--</div>
 
     <script>
-        function atualizar() {
-            const data = new Date();
-            const horas = data.getHours().toString().padStart(2, '0');
-            const minutos = data.getMinutes().toString().padStart(2, '0');
-            const segundos = data.getSeconds().toString().padStart(2, '0');
+        function atualizarRelogio() {
+            const agora = new Date();
+            const horas = agora.getHours().toString().padStart(2, '0');
+            const minutos = agora.getMinutes().toString().padStart(2, '0');
+            const segundos = agora.getSeconds().toString().padStart(2, '0');
             
-            document.getElementById("relogio").textContent = 
+            document.getElementById('relogio').textContent = 
                 `${horas}:${minutos}:${segundos}`;
         }
-        
-        atualizar();
-        setInterval(atualizar, 1000);
+
+        // Atualiza a cada segundo
+        atualizarRelogio();
+        setInterval(atualizarRelogio, 1000);
     </script>
 </body>
 </html>
